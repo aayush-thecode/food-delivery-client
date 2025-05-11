@@ -13,6 +13,7 @@ import { login } from "@/api/auth";
 import { useRouter } from "next/navigation";
 import { LuMail, LuLock } from "react-icons/lu";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -58,7 +59,7 @@ const LoginPage = () => {
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 bg-white shadow-2xl rounded-3xl overflow-hidden">
         {/* Left Section - Image (Only on Desktop) */}
         <div className="hidden md:flex items-center justify-center bg-orange-100 p-8">
-          <img
+          <Image
             src="/login/login-burger.jpg"
             alt="Login Illustration"
             className="w-80 h-auto object-contain"
