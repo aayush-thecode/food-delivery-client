@@ -51,7 +51,7 @@ const LoginPage = () => {
   };
 
   const handleForgotPassword = () => {
-    router.push("/forgot-password");  // This will redirect to a page where users can reset their password
+    router.push("/forgot-password");  
   };
 
   return (
@@ -63,6 +63,8 @@ const LoginPage = () => {
             src="/login/login-burger.jpg"
             alt="Login Illustration"
             className="w-80 h-auto object-contain"
+            width={320}
+            height={240}
           />
         </div>
 

@@ -3,7 +3,7 @@
 
 export interface IReview {
     rating: number;
-    review: string;
+    review: string; 
 }
 
 export interface IReviews{
