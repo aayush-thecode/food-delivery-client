@@ -41,7 +41,7 @@ const GenderInput: React.FC<IProps> = ({ control }) => {
                         <>
                             <label>Gender</label>
                             <section >
-                                <Select  {...others} options={options} />
+                                <Select  {...others} options={options} value={null}/>
                             </section>
                         </>
                     )

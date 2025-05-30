@@ -73,7 +73,7 @@ const ReviewForm: React.FC<IProps> = ({ itemId }) => {
           <div>
             <textarea
               placeholder="Write review"
-              className="p-2 rounded-md border border-orange-500 focus:outline-none min-h-[200px] w-[min(400px,100%)]"
+              className="p-2 rounded-md border border-black focus:outline-none min-h-[200px] w-[min(525px,100%)]"
               {...register('review')}
             />
             {errors.review && <p className="text-red-500 mt-0 text-xs">{errors.review.message}</p>}

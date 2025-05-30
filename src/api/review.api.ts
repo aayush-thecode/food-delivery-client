@@ -6,7 +6,7 @@ import api from "@/axios/api.axios";
 interface IReview {
 rating:number,
 review:string,
-foodId:string
+foodTypeId:string
 }
 
 export const postReview = async(data:IReview) =>{

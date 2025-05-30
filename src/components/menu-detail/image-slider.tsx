@@ -1,16 +1,13 @@
-'use client'
+'use client';
 
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import React from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IImage } from '@/interface/food-interface';
 
-const Slider = dynamic(() => import('react-slick'), {
-  ssr: false
-
-});
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 interface IProps {
   images: IImage[];
@@ -29,26 +26,22 @@ const ImageSlider: React.FC<IProps> = ({ images }) => {
   };
 
   return (
-    <div className="h-[550px] w-[550px] overflow-hidden">
-      <Slider className="h-full" {...settings}>
-        {images?.map((image, index) => {
-
-
-          return (
-            <div key={index} className="h-[550px] w-[550px]">
-              <Image
-                src={image.path}
-                width={1000}
-                height={1000}
-                alt="Food detail image"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          );
-        })}
+    <div className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] aspect-[4/3] mx-auto relative rounded-2xl overflow-hidden">
+      <Slider {...settings}>
+        {images?.map((image, index) => (
+          <div key={index} className="relative w-full h-[300px] sm:h-[400px] md:h-[450px]">
+            <Image
+              src={image.path}
+              alt={`Food image ${index + 1}`}
+              fill
+              className="object-cover w-full h-full rounded-2xl"
+              sizes="(max-width: 800px) 100vw, 600px"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );
-}
+};
 
 export default ImageSlider;
