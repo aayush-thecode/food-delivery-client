@@ -53,7 +53,7 @@ const FoodDetail: React.FC<IProp> = ({ id }) => {
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
               Leave a Review
             </h2>
-            <ReviewForm itemId={id} />
+            <ReviewForm foodId={id} />
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const FoodDetail: React.FC<IProp> = ({ id }) => {
             <h2 className="text-xl font-semibold text-gray-800 mb-3">
               Customer Reviews
             </h2>
-            <Reviews itemId={id} />
+            <Reviews foodId={id} />
           </div>
         </div>
       </div>

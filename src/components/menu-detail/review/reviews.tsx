@@ -7,15 +7,15 @@ import PageLoading from '@/components/ui/page-loading'
  
  
  interface IProps {
-     itemId:string
+     foodId:string
  }
  
  
- const Reviews:React.FC<IProps> = ({itemId}) => {
+ const Reviews:React.FC<IProps> = ({foodId}) => {
  
      const {isLoading,data} = useQuery({
-         queryKey:['reviews'],
-         queryFn:() => getFoodReview(itemId)
+         queryKey:['reviews', foodId],
+         queryFn:() => getFoodReview(foodId)
      })
  
      if(isLoading){

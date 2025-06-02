@@ -11,10 +11,10 @@ import { postReview } from '@/api/review.api';
 import toast from 'react-hot-toast';
 
 interface IProps {
-  itemId: string;
+  foodId: string;
 }
 
-const ReviewForm: React.FC<IProps> = ({ itemId }) => {
+const ReviewForm: React.FC<IProps> = ({ foodId }) => {
   const queryClient = useQueryClient();
   const {
     reset,
@@ -48,7 +48,7 @@ const ReviewForm: React.FC<IProps> = ({ itemId }) => {
   const onSubmit: SubmitHandler<IReview> = (data) => {
     mutate({
       ...data,
-      itemId, 
+      foodId, 
     } as any);
   };
 

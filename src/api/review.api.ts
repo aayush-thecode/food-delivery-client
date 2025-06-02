@@ -4,9 +4,10 @@
 import api from "@/axios/api.axios";
 
 interface IReview {
-rating:number,
-review:string,
-foodTypeId:string
+    userId:string;
+    rating:number;
+    review:string;
+    foodTypeId:string;
 }
 
 export const postReview = async(data:IReview) =>{
@@ -22,7 +23,7 @@ export const postReview = async(data:IReview) =>{
 export const getFoodReview = async(foodId:string) =>{
     try{
         const response = await api.get(`/review/${foodId}`)
-        return response?.data
+        return response?.data?.data;
 
     }catch(error:any){
         throw error?.response?.data; 
