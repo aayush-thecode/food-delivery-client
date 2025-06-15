@@ -22,8 +22,8 @@ export const postReview = async(data:IReview) =>{
 
 export const getFoodReview = async(foodId:string) =>{
     try{
-        const response = await api.get(`/review/${foodId}`)
-        return response?.data?.data;
+        const response = await api.get(`/review/menu/${foodId}`)
+        return response?.data;
 
     }catch(error:any){
         throw error?.response?.data; 

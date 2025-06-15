@@ -25,7 +25,7 @@ export const RatingStar:React.FC<IProp> = ({rating,edit=false,onChange}) => {
         <div className='flex'>
             <StarRating 
             isReadOnly={!edit} 
-            dimension={8} 
+            dimension={6} 
             initialRating={rating ?? 0} 
             isHalfRatingEnabled
             onRatingChange={(newRating) => onChange && onChange(null,newRating)} />
